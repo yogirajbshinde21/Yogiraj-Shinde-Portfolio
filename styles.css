@@ -17,22 +17,35 @@ body{
     --byOrange : #e84949;
 }
 
+/* .hire-btn-bottom{
+    display: none;
+} */
+
 #wrapper{
     height: 100vh;
     width: 100vw;
     overflow-y: auto;
     overflow-x: hidden;
+    /* cursor: url(./yogiraj-images/final-cursor-removebg-preview.png), auto; */
+   
 }
+
+.cursor-wrapper{
+    /* cursor: url(./yogiraj-images/final-cursor-removebg-preview.png), auto; */
+}
+
 
 .container{
     width: 1200px;
     margin: 0 auto;
+    /* cursor: url(./yogiraj-images/final-cursor-removebg-preview.png), auto; */
 }
 
 /* Note: Jabhi bhi kuch bhi single line mein chahiye, flex use karo!*/
 
 
 .navbar{
+    width: 100%;
     display: flex;  /* flex ki bajese hyperlinks jo hai navbar mein vo ek single line mein aa jate hai.*/
     justify-content: space-between;
     align-items: center;
@@ -87,12 +100,11 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-
     gap: 5rem;
     margin: 4rem auto;
     padding: 0 1rem;
-    padding-bottom: 8rem ;
-    width: 1200px ;
+    padding-bottom: 8rem;
+    
 
 }
 
@@ -109,9 +121,10 @@ a{
 
 
 .hero-section-left{
-     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -151,8 +164,37 @@ a{
     position: relative;
     z-index: 1;
   }
+
+  .hire-btn-bottom {
+    background-color: #e84949;
+    width: fit-content;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
+  }
   
   .hire-btn::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+  }
+
+  .hire-btn-bottom::before {
     content: "";
     position: absolute;
     background-color: #fff;
@@ -169,8 +211,17 @@ a{
   .hire-btn:hover::before {
     transform: scaleX(1);
   }
+
+  .hire-btn-bottom:hover::before {
+    transform: scaleX(1);
+  }
   
   .hire-btn:hover {
+    border: solid 3px #e84949;
+    color: black;
+  }
+
+  .hire-btn-bottom:hover {
     border: solid 3px #e84949;
     color: black;
   }
@@ -563,76 +614,7 @@ a{
     background-image: url(./yogiraj-images/QRGen-front.png);
 }
 
-@media (max-width: 1300px){
-    .page-header{
-        padding-top: 30px;
-        color: var(--byOrange);
-        text-align: center;
-        font-size: 40px;
-    }
 
-    .project-container{
-        padding: 5px;
-        margin: 10px;
-        gap: 60px;
-    }
-
-    .project-card{
-        width: 100%;
-        height: 300px;
-    }
-
-    .project-card{
-        background-size: cover;
-        background-position: center;
-    }
-
-    .project-content{
-        scale: 0.5;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-    }
-
-.project-content-left{
-    left: 0;
-}
-
-.project-heading{
-    font-size: 40px;
-    width: 100%;
-}
-
-.project-subheading{
-    width: 100%;
-}
-
-#project2{
-    margin-left: 0;
-}
-
-#project4{
-    margin-left: 0;
-}
-
-.project-skill-container{
-    width: 100%;
-}
-
-.project-skill{
-    width: 35px;
-}
-
-.project-card:hover .project-number{
-    display: none;
-}
-
-.project-card:hover .project-content{
-    scale: 0.55;
-}
-
-}
 
 .skill-container{
     position: relative;
@@ -826,4 +808,309 @@ footer{
 .icon-wrapper{
     display: flex;
     gap: 1rem;
+}
+
+
+/* Media queries for Nav Bar */
+@media only screen and (min-width:1000px)and (max-width:2000px) {
+    .nav-items{
+        padding: 0 8em;
+    }
+
+    .hire-btn-bottom{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .nav-items{
+        display: none;
+    }
+
+
+}
+
+/* Media queries for hero section */
+@media only screen and (max-width:1000px) {
+
+    .hero-section {
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: -1rem;
+        padding-bottom: 3rem;
+        flex: 100%;
+        margin: 0 auto;
+      }
+
+    .hero-section-left{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 1rem;
+        padding-bottom: 3rem;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        flex: 50%;
+        
+    }
+
+    .hero-section-sub-heading{
+        font-size: 45px;
+        line-height: 45px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .role{
+        font-size: 40px;
+        line-height: 45px;
+        font-weight: 500;
+        margin-left: 1rem;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    .user-image, .user-image img{
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .hire-btn{
+        display: none;
+    }
+
+    .hire-btn-bottom{
+        position: absolute;
+        bottom: -2.5rem;
+        left: 4.8rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-section-right{
+        position: relative;
+        flex: 50%;
+    }
+
+     .hero-section-heading{
+        margin-top: 1.5rem;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .hero-section-description {
+        text-align: center;
+        margin-top: 2rem;
+        /* padding-top: 2rem; */
+        width: 100%;
+        gap: 2rem;
+        font-size: 18px;
+        font-weight: 300;
+      }
+
+      .faded-text {
+        display: none;
+      }
+
+
+}
+
+
+
+/* Media queries for project section */
+@media (max-width: 1300px){
+    .page-header{
+        padding-top: 30px;
+        color: var(--byOrange);
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .project-container{
+        padding: 5px;
+        margin: 10px;
+        gap: 60px;
+    }
+
+    .project-card{
+        width: 100%;
+        height: 300px;
+    }
+
+    .project-card{
+        background-size: cover;
+        background-position: center;
+    }
+
+    .project-content{
+        scale: 0.1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        font-size: 10px;
+    }
+
+.project-content-left{
+    left: 0;
+}
+
+.project-heading{
+    font-size: 40px;
+    width: 100%;
+}
+
+.project-subheading{
+    width: 100%;
+}
+
+#project2{
+    margin-left: 0;
+}
+
+#project4{
+    margin-left: 0;
+}
+
+.project-skill-container{
+    width: 100%;
+}
+
+.project-skill{
+    width: 35px;
+}
+
+.project-card:hover .project-number{
+    display: none;
+}
+
+.project-card:hover .project-content{
+    scale: 0.55;
+}
+
+}
+
+/* media queries for skills section */
+
+@media only screen and (max-width: 1000px) {
+    .skill-container{
+        width: 100%;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+        flex: 100%;
+    }
+
+    .skill-container-left{
+        width: 100%;
+        flex: 50%;
+    }
+
+    .skill-container-right{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        flex: 50%;
+    }
+
+    .skill-fade-text{
+        display: none;
+    }
+
+    .skills-logo{
+        width: 60px;
+    }
+
+    .caps{
+        font-size: 70px;
+    }
+
+    .skill-heading{
+        font-size: 30px;
+    }
+
+    .skill-subHeading{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+}
+
+/* Media queries for contact us section */
+@media only screen and (max-width: 1000px) {
+    .contactus-heading{
+        font-size: 40px;
+    }
+
+    .contactus-sub-heading{
+        font-size: 20px;
+    }
+
+    .formfield-container{
+        width: 100%;
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formfield{
+        width: 70%;
+    }
+
+    .new-btn{
+        margin: 1rem 7rem;
+        /* margin-left: 7rem; */
+    }
+
+    .submit-icon{
+        padding: 0 0.5rem;
+    }
+
+    .contactus-form-container{
+        margin-top: 0;
+    }
+}
+
+/* Media queries for footer */
+@media only screen and (max-width: 1000px) {
+    footer{
+        padding: 2rem;
+    }
+
+    .footer-wrapper{
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .link-wrapper{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .icon-wrapper{
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .footer-faded-text{
+        display: none;
+    }
 }
