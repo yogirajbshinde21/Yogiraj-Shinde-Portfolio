@@ -2,18 +2,22 @@
 
 This project is a personal portfolio website built using HTML, CSS, and JavaScript. It showcases your work, skills, and experiences in a visually appealing and user-friendly manner.
 
+---
+
 ## Features
 
 - Responsive design for optimal viewing on various devices
 - Smooth scrolling and interactive elements
 - Sections for about me, projects, skills, and contact information
 
+---
 ## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
 
+---
 ## Sections
 
 ### Introduction Page
@@ -38,13 +42,14 @@ This project is a personal portfolio website built using HTML, CSS, and JavaScri
 ![Screenshot 2024-06-21 171626](https://github.com/yogirajbshinde21/Yogiraj-Shinde-Portfolio/assets/84953719/552c2c89-e6c7-4680-a339-e5d1bc014b8a)
 
 
-
+---
 ## Usage
 
 1. Clone the repository: `git clone https://github.com/your-username/portfolio-website.git`
 2. Navigate to the project directory.
 3. Open `index.html` in your web browser.
 
+---
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
